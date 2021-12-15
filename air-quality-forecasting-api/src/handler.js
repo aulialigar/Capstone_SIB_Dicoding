@@ -25,9 +25,7 @@ const getAllDataHandler = (request, h) => {
     // return 200 and kembalikan data yang ditemukan
     const response = h.response({
       status: 'success',
-      data: filteredData.sort(function(a, b) {
-        return b.prediksi - a.prediksi;
-      }),
+      data: filteredData,
     });
     response.code(200);
     return response;
@@ -37,9 +35,7 @@ const getAllDataHandler = (request, h) => {
   // return semua data yang ada
   const response = h.response({
     status: 'success',
-    data: data.sort(function(a, b) {
-      return b.prediksi - a.prediksi;
-    }),
+    data: data,
   });
   response.code(200);
   return response;
